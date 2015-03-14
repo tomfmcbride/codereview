@@ -2,6 +2,12 @@
 
 $(function() {
 	formStep();
+	paginateHover();
+
+	$('.bxslider').bxSlider({
+  	pagerCustom: '#bx-pager',
+  	controls: false
+  });
 
 });
 
@@ -21,6 +27,12 @@ function formStep(){
 			$(stepContainer).addClass('active');
 		}
 	})
+}
+
+function paginateHover() {
+	$('.js-paginate').hover(function() {
+		$(this).toggleClass('hover');
+	});
 }
 
 function submitData(){
@@ -43,8 +55,3 @@ function submitData(){
 
 	});
 }
-
-$(document).ready(function(){
-  $('.bxslider').bxSlider();
-});
-
